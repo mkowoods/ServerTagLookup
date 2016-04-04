@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>ServerTagLookup</title>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/static/TableTools-2.2.4/css/dataTables.tableTools.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        #item-search-bar {
+            position: relative;
+            top: 40px;
+            width: 90%;
+        }
+
+
+        .spinner {
+          /*display: inline-block;
+          opacity: 0;
+          max-width: 0;
+          */
+
+          -webkit-transition: opacity 0.25s, max-width 0.45s;
+          -moz-transition: opacity 0.25s, max-width 0.45s;
+          -o-transition: opacity 0.25s, max-width 0.45s;
+          transition: opacity 0.25s, max-width 0.45s; /* Duration fixed since we animate additional hidden width */
+        }
+
+        .has-spinner.active {
+          cursor:progress;
+        }
+
+        .has-spinner.active .spinner {
+          opacity: 1;
+          max-width: 50px; /* More than it will ever come, notice that this affects on animation duration */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="banner"></div>
+    <div class="row">
+        <div class = "col-md-4">
+            <form class="form-inline">
+              <div class="form-group">
+                <textarea class="form-control" rows = 13 id="server_tag" placeholder="Server Tag"></textarea>
+                <select id="manf" class="form-control">
+                    <!--<option value="lucky">Feeling Lucky</option>-->
+                    <option value="hp">HP</option>
+                    <option value="dell">Dell</option>
+                </select>
+                  <button class="btn btn-default" type="button" id="submit-button">Input</button>
+              </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <div id="status">
+                <div id="text-description"></div>
+                <div> Server Tags Processed: <span id="tags-reviewed">0</span>/<span id="tags-errors">0</span> of <span id="tags-total">0</span></div>
+                <div> Components Mapped: <span id="comps-found">0</span>/<span id="comps-total">0</span></div>
+            </div>
+            <div id="log">
+
+            </div>
+             <div class="progress">
+                  <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%"></div>
+                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%"></div>
+             </div>
+        </div>
+        <div class="col-md-4">
+            <div id = "item-search-bar">
+                <div class="input-group" >
+                    <input type="text" class="form-control" id="sku" placeholder="Search for Item...">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" id="item-search-btn-search">Search</button>
+                        <button type="button" class="btn btn-default" id="item-search-btn-update" disabled>Update</button>
+                        <button type="button" class="btn btn-default" id="item-search-btn-clear" disabled>Reset</button>
+                    </span>
+                </div>
+                <div>
+                    <input type= "text" class="form-control" id="internal-sku" placeholder="Internal SKU">
+                </div>
+                <div>
+                    <input type= "text" class="form-control" id="comp-cls" placeholder="Comp Type">
+                </div>
+                <div id="item-search-bar-resp"></div>
+            </div>
+
+        </div>
+    </div>
+    <div id="results">
+        <table id = "data-table">
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Product Number</th>
+                    <th>Component</th>
+                    <th>Internal Component</th>
+                    <th>Qty</th>
+                    <th>CategorySubType</th>
+                    <th>Covered Item</th>
+                    <th>OEM Description</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="/static/TableTools-2.2.4/js/dataTables.tableTools.min.js"></script>
+    <script>
+        var main = function(){
+            //TODO: add auto detect feature by looking at len of server tag
+            var AVG_REQUEST_DELAY = 200
+            var TOTAL_TAGS = 0
+            var TOTAL_TAGS_SENT = 0
+            var TOTAL_TAG_COMPLETED = 0
+            $.fn.dataTable.TableTools.defaults.aButtons = [ "copy", "csv", "xls" ];
+            var data_table = $('#data-table').DataTable({
+                    dom: 'T<"clear">lfrtip',
+                    tableTools: {
+                        "sSwfPath": "/static/TableTools-2.2.4/swf/copy_csv_xls_pdf.swf"
+                    },
+                    "pageLength": 50
+                });
+
+            function updateLog(comment){
+                $("#log").prepend("<div>" + comment + "</div>");
+            }
+
+            function clearLog(){
+                $("#log").empty()
+            }
+
+            var completed_perc = function(){return Math.round(100*(TOTAL_TAG_COMPLETED/TOTAL_TAGS))}
+            var sent_perc = function(){return Math.round(100*(TOTAL_TAGS_SENT/(TOTAL_TAGS*2)))}
+
+            function updateProgressBar(cls, perc){
+                //perc: % as an int with no decimals
+                $(cls).css('width', perc+'%').attr('aria-valuenow', perc);
+            }
+
+            function clearProgressBar() {
+                updateProgressBar('.progress-bar', 0);
+            }
+
+            function updateProgressBarRequestCompleted(){
+                TOTAL_TAGS_SENT--
+                TOTAL_TAG_COMPLETED++
+                updateProgressBar('.progress-bar-warning', sent_perc());
+                updateProgressBar('.progress-bar-info', completed_perc());
+            }
+
+            function sendOverTheWire(){
+                var server_tags = $("#server_tag").val().trim().split("\n");
+                TOTAL_TAGS = server_tags.length;
+                TOTAL_TAG_COMPLETED = 0;
+                TOTAL_TAGS_SENT = 0;
+                clearProgressBar();
+                clearLog();
+                var manf = $("#manf").val();
+                $("#tags-reviewed").text(0);
+                $("#tags-errors").text(0);
+                $("#comps-total").text(0);
+                $("#comps-found").text(0);
+                $("#tags-total").text(TOTAL_TAGS);
+
+                var CUMM_DELAY = 0
+                $.each(server_tags, function(i, tag){
+                    //console.log(CUMM_DELAY)
+                    setTimeout(function(){
+                                   getComponents(tag, manf);
+                                }, CUMM_DELAY)
+                    CUMM_DELAY += (AVG_REQUEST_DELAY/2 + (Math.random()*1000 % Math.round(AVG_REQUEST_DELAY)))
+                })
+            };
+
+            function getComponents(tag, manf) {
+                updateLog("Sending Request: "+tag);
+                TOTAL_TAGS_SENT++
+                console.log(TOTAL_TAGS_SENT)
+                console.log(TOTAL_TAG_COMPLETED)
+                console.log(sent_perc())
+                updateProgressBar('.progress-bar-warning', sent_perc())
+                request = $.ajax({
+                    type: "GET",
+                    url: "server_tag_api",
+                    data: {server_tag: tag, manf: manf},
+                    dataType: 'json'
+                });
+                request.done(function (data) {
+                    updateLog("Downloaded: "+tag);
+                    var $tr = $("#tags-reviewed");
+                    var tags_reviewed = parseInt($tr.text(), 10);
+                    $tr.text(tags_reviewed + 1);
+                    convertResponseToRows(data[0]);
+                });
+                request.fail(function (jqXHR, textStatus) {
+                    updateLog("Request Failed: " + textStatus + " "+tag);
+                    var $te = $("#tags-errors");
+                    var tags_errors = parseInt($te.text(), 10);
+                    $te.text(tags_errors + 1);
+                    convertResponseToRows({tag: tag, product_number: null, components: []})
+                });
+                request.always(function(){
+                    //console.log(TOTAL_TAGS_SENT)
+                    //console.log(TOTAL_TAG_COMPLETED)
+                    //console.log(sent_perc())
+                    updateProgressBarRequestCompleted();
+                })
+            }
+
+
+            function convertResponseToRows(product_data) {
+                //takes response from server_tag_api and converts it into
+                //an array of <tr> rows to be added to the results table
+
+                var tag = product_data["tag"]
+                var product_number = product_data["product_number"]
+                var comps = product_data["components"]
+                var n_comps = comps.length
+
+                var comps_found = 0
+                if (n_comps === 0){
+                    data_table.row.add([tag, product_number, null, null, null, null, null, null]).draw()
+                } else {
+                    for (var i = 0; i < n_comps; i++) {
+                        var comp_sku = comps[i]["part_number"];
+                        var qty = comps[i]["qty"];
+                        var description = comps[i]["description"];
+                        var category_sub_type = comps[i]["cat_sub_type"];
+                        var internal_component = comps[i]["internal_component"];
+                        var is_included = comps[i]["is_included"]
+                        if(internal_component !== null){comps_found++;}
+                        var row = [
+                            tag,
+                            product_number,
+                            comp_sku,
+                            internal_component,
+                            qty,
+                            category_sub_type,
+                            is_included,
+                            description
+                        ]
+                        data_table.row.add(row).draw()
+                    }
+                }
+                $ctot = $("#comps-total");
+                $cfound = $("#comps-found");
+                $ctot.text(parseInt($ctot.text(), 10) + n_comps)
+                $cfound.text(parseInt($cfound.text(), 10) + comps_found)
+            }
+
+            $("#submit-button").click(function () {
+                data_table.clear();
+                sendOverTheWire();
+            })
+
+            $('input').keypress(function(e) {
+                if (e.which == 13) {
+                    //MW-092715 deprecated
+                    //sendOverTheWire();
+                    return false;
+                }
+            });
+
+            //Search Items and Make Updates Relates to Item Search Bar
+            //sku to test with M19CG
+
+
+            item_interface = {};
+            item_interface.searchedSKU = null
+            item_interface.priorValue = [null, null, null]
+            item_interface.hasChanged = function(){
+                var current_value = [$("#sku").val(), $("#internal-sku").val(), $("#comp-cls").val()]
+                return (this.prior_value.toString() !== current_value.toString())
+            }
+            item_interface.isValidInput = function(){
+                return ($("#sku").val() !== "" && $("#internal-sku").val() !== "" && $("#comp-cls").val() !== "")
+            }
+
+            item_interface.canBeUpdated = function(bool){
+                $("#sku").prop('disabled', bool)
+                $('#item-search-btn-clear').prop('disabled', !bool)
+                $('#item-search-btn-update').prop('disabled', !bool)
+            }
+
+            $('#item-search-btn-clear').click(function(){
+                $("#sku").val(null)
+                $("#internal-sku").val(null)
+                $("#comp-cls").val(null)
+                $("#item-search-bar-resp").empty()
+
+                item_interface.canBeUpdated(false)
+
+            });
+
+
+            $('#item-search-btn-search').click(function(){
+                var sku = $("#sku").val()
+                $(this).text("Loading...")
+                request = $.ajax({
+                    type: "GET",
+                    url: "item_master_api",
+                    data: {sku: sku},
+                    dataType: 'json'
+                });
+
+                request.done(function(data){
+                    console.log(data)
+                    var sku = data['sku']
+                    var int_sku = data['internal_sku']
+                    var comp_cls = data['comp_cls']
+
+                    item_interface.searchedSKU = sku
+                    item_interface.prior_value = [sku, int_sku, comp_cls]
+
+                    $("#sku").val(sku)
+                    $("#internal-sku").val(int_sku)
+                    $("#comp-cls").val(comp_cls)
+
+                    item_interface.canBeUpdated(true)
+                })
+
+                request.fail(function (jqXHR, textStatus) {
+                    $("#item-search-bar-resp").text("Request Failed: " + textStatus);
+                });
+
+                request.always(function(){
+                    $('#item-search-btn-search').text("Search")
+                })
+
+            });
+
+            $('#item-search-btn-update').click(function(){
+                var currentSKU = $("#sku").val()
+                var internal_sku = $("#internal-sku").val()
+                var comp_cls = $("#comp-cls").val()
+                if (item_interface.searchedSKU === currentSKU && item_interface.hasChanged() && item_interface.isValidInput()){
+                    $("#item-search-bar-resp").text('ok to upload')
+                    request = $.ajax({
+                        type: "POST",
+                        url: "item_master_api",
+                        data: {'sku': currentSKU,
+                               'internal_sku': internal_sku,
+                               'comp_cls': comp_cls}
+                    })
+                    request.done(function(data){
+                        $("#internal-sku").val(data.internal_sku)
+                        $("#comp-cls").val(data.comp_cls)
+
+                        item_interface.prior_value[1] = data.internal_sku
+                        item_interface.prior_value[2] = data.comp_cls
+
+                        $("#item-search-bar-resp").text(JSON.stringify(data))
+                    })
+                } else {
+                    $("#item-search-bar-resp").text('not ok to upload')
+                }
+
+            })
+
+        };
+
+
+        $(document).ready(main);
+    </script>
+</body>
+</html>
+

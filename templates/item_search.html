@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Search(Beta)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <style>
+       .ui-autocomplete {
+            max-height: 160px;
+            overflow-y: auto;
+            position: absolute;
+            /* prevent horizontal scrollbar */
+            /*overflow-x: hidden;*/
+        }
+    </style>
+</head>
+<body>
+
+<div id="banner">Item Search (Beta)</div>
+<div class="row">
+    <div class="col-md-6">
+        <div id = "item-search-bar">
+            <div class="input-group">
+                <div class = "ui-widget">
+                    <input type="text" class="form-control" id="sku" placeholder="Try Typing W347K or B21... Scroll to see More Results"">
+                </div>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" id="item-search-btn">Search</button>
+                </span>
+            </div>
+            <div id="item-search-bar-resp">
+                <table id ="hdd-spec-table" class="table">
+                    <thead>
+                        <th>SKU</th>
+                        <th>Vendor</th>
+                        <th>Capacity</th>
+                        <th>Form Factor</th>
+                        <th>Transfer Rate</th>
+                        <th>Disk Speed</th>
+                        <th>Interface</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class = "row">
+    <div class = "col-md-11">
+        <div id = "compatible-parts">
+            Compatible Parts:
+            <table id="compatible-parts-table" class="table">
+                    <thead>
+                        <th>SKU</th>
+                        <th>Vendor</th>
+                        <th>Capacity</th>
+                        <th>Form Factor</th>
+                        <th>Transfer Rate</th>
+                        <th>Disk Speed</th>
+                        <th>Interface</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>
+
+    function getQueryString(){
+        var query = window.location.search.substring(1);
+        var query_terms = query.split("=")
+        var q_param = query_terms[0]
+        var q_string = query_terms[1]
+        if (q_param == "sku"){
+            return q_string
+        }
+    }
+
+    function convertArrayToHTMLTableRow(arr){
+        var row = "<tr>"
+        var n = arr.length
+        for (var i = 0; i < n; i++){
+            row = row + "<td>" + arr[i] + "</td>"
+         }
+        row = row + "</tr>"
+        return row
+    }
+
+    function HDD (data){
+        var obj = data
+        obj.getPartId = function(){ return this.PART_ID }
+
+        obj.getVendor = function() { return this.VENDOR }
+
+        obj.getCapacity = function() { return this.STORAGE_SIZE + " " + this.STORAGE_SIZE_UOM }
+
+        obj.getInterface = function() {return this.CONNECTION_TYPE }
+
+        obj.getTransferRate = function() { return this.TRANSFER_RATE + " " + this.TRANSFER_RATE_UOM }
+
+        obj.getDiskSpeed = function() { return this.DISK_SPEED + " " + this.DISK_SPEED_UOM }
+
+        obj.getFormFactor = function() { return this.FORM_FACTOR }
+
+        obj.getDescription = function() { return this.DESCRIPTION }
+
+        obj.getRowForTable = function(){
+            var array = [obj.getPartId(), obj.getVendor(),
+                         obj.getCapacity(), obj.getFormFactor(), obj.getTransferRate(),
+                         obj.getDiskSpeed(), obj.getInterface(), obj.getDescription()]
+            return array
+        }
+        return obj
+    }
+
+
+
+    var main = function() {
+        $('#item-search-btn').click(function () {
+            var sku = $("#sku").val()
+//            request = $.ajax({
+//                type: "GET",
+//                url: "/item_search_api",
+//                data: {"sku": sku, "search-type": "get-part"},
+//                dataType: 'json'
+//            });
+//            request.done(function (data) {
+//                var $table_body = $("#hdd-spec-table > tbody")
+//                $table_body.empty()
+//
+//                if(data !== null){
+//                    var NewHDD = HDD(data)
+//                    var part_specs = data
+//                    $table_body.append(convertArrayToHTMLTableRow(NewHDD.getRowForTable()))
+//                }
+//
+//            })
+            req_get_compatible_parts = $.ajax({
+                type: "GET",
+                url: "/item_search_api",
+                data: {"sku": sku, "search-type": "get-directly-compatible-parts"},
+                dataType: 'json'
+            })
+            req_get_compatible_parts.done(function (data) {
+
+                data.sort(function(a, b){
+                    if (a.PART_ID > b.PART_ID){
+                        return 1
+                    }
+                    if (a.PART_ID < b.PART_ID){
+                        return -1
+                    }
+                    return 0
+                })
+
+                var $table_body = $("#compatible-parts-table > tbody")
+                var $hdd_spec_table = $("#hdd-spec-table > tbody")
+
+                $table_body.empty()
+                $hdd_spec_table.empty()
+
+                var len = data.length
+                for (var i = 0; i < len; i++){
+                    var hdd = HDD(data[i])
+                    if (hdd.getPartId() === sku) {
+
+                        $hdd_spec_table.append(convertArrayToHTMLTableRow(hdd.getRowForTable()))
+                    }
+                    $table_body.append(convertArrayToHTMLTableRow(hdd.getRowForTable()))
+                }
+            })
+        })
+
+        var query_str = getQueryString()
+        if (query_str !== undefined) {
+            $('#sku').val(query_str)
+            $("#item-search-btn").click()
+        }
+
+        (function(){
+            $.ajax({
+                url: "/static/hdd_keys_tmp.json",
+                dataType: "json",
+                success: function(data) {
+                    var tags = data;
+
+                    tags.sort()
+
+                    console.log("Tags Data: "+tags.length)
+
+
+                    $("#sku").autocomplete({
+                        source: tags,
+                        minLength: 2
+                    });
+
+                    console.log("Binding of tag to SKU autocomplete")
+                }
+            })
+        })()
+
+        $("#sku").keypress(function(e){
+            if (e.which == 13){
+                console.log("Key Press Triggered")
+                $('#item-search-btn').click()
+            }
+        });
+
+
+    }
+
+     $(document).ready(main);
+ </script>
+<script>
+
+
+</script>
+</body>
+</html>

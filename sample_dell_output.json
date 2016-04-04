@@ -1,0 +1,1628 @@
+[
+[
+    {
+        "components": [
+            {
+                "description": "LABEL, REGULATORY, SIDE, UNIVERSAL, BLANK , V2",
+                "part_number": "JD509",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, ENCLOSURE, ENCLOSURE MANAGEMENT MODULE, MD1000, ROHS, V4",
+                "part_number": "JT517",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CHASSIS, RACK MOUNT, MD1000, ROHS, V3",
+                "part_number": "XM792",
+                "qty": "1"
+            },
+            {
+                "description": "CORD, POWER, 125V, 6FT, TAPE BACKUP UNIT",
+                "part_number": "6F190",
+                "qty": "2"
+            },
+            {
+                "description": "TECHNICAL SHEET, DOCUMENTATION UPDATE, PV POMPANO, WORLD WIDE",
+                "part_number": "DM775",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, STRAIN RELIEF, CABLE, POWER",
+                "part_number": "GG460",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, DOCUMENTATION ON COMPACT DISK, SYSTEM BOARD, MD1000",
+                "part_number": "GR323",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, GETTING STARTED, MD1000, DAO/BCC",
+                "part_number": "HK192",
+                "qty": "1"
+            },
+            {
+                "description": "Guide, Product, Information     Poweredge/powervault, DAO/BCC",
+                "part_number": "NP544",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, BARCODE, SYS BOX, GENERIC",
+                "part_number": "23501",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Barcode, Track, System, Generic",
+                "part_number": "23503",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, OPT CNTNR, LENGTH/LONG",
+                "part_number": "2733E",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, CONTAINER, MDXX00, DELL AMERICAS ORGANIZATION",
+                "part_number": "HD156",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, BEZEL, MD1000",
+                "part_number": "R8928",
+                "qty": "1"
+            },
+            {
+                "description": "SCREW, 6-32X1/4\", FLAT HEAD, MICROSOFT, ZINC PLATED STEEL, COUNTERSINK",
+                "part_number": "1213C",
+                "qty": "40"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, HARD DRIVE, Serial ATA, UNIVERSAL, 1IN",
+                "part_number": "D962C",
+                "qty": "10"
+            },
+            {
+                "description": "Label, Print On Demand, Hard Drive",
+                "part_number": "DH283",
+                "qty": "10"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, BLANK , HARD DRIVE, UNIVERSAL, 1IN, 2",
+                "part_number": "H7511",
+                "qty": "5"
+            },
+            {
+                "description": "KIT, FILLER, SCSI (SMALL COMPUTER SYSTEMS INTERFACE), PC INTERFACE, PERC5E",
+                "part_number": "JH349",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, ENCLOSURE, ENCLOSURE MANAGEMENT MODULE, MD1000, ROHS, V4",
+                "part_number": "JT517",
+                "qty": "1"
+            },
+            {
+                "description": "Kit, Media, Digital Video Disk  Drive, Document Object Model   V5.4",
+                "part_number": "M558C",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, CARD (CIRCUIT), PERC5E, MD1000",
+                "part_number": "NM937",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, CARD (CIRCUIT), INTERPOSER, HARD DRIVE, 1300L, 9G",
+                "part_number": "PN939",
+                "qty": "10"
+            },
+            {
+                "description": "A   SSEMBLY, CABLE, 1M, 4X, SERIAL ATTACHED SCSI",
+                "part_number": "R8200",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, RACK RAIL, R-RAIL3U, STATIC, MDXX00",
+                "part_number": "U9426",
+                "qty": "1"
+            },
+            {
+                "description": "HARD DRIVE, 1TB, EXPANDABLE SYSTEM, S2, 7.2K, 3.5, HITACHI, GEMINI",
+                "part_number": "YR660",
+                "qty": "10"
+            }
+        ],
+        "product_number": "PowerVault MD1000",
+        "tag": "F68DBG1"
+    }
+],
+[
+    {
+        "components": [
+            {
+                "description": "HEATSINK, PLASTIC GRID ARRAY, 2.7X6.6X1.0",
+                "part_number": "CN728",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Barcode, Track, System, Generic",
+                "part_number": "23503",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, REGULATORY, SIDE, UNIVERSAL, BLANK , V2",
+                "part_number": "JD509",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, INTEL, SERVER, XMN, RBDG",
+                "part_number": "8PR39",
+                "qty": "1"
+            },
+            {
+                "description": "PROCESSOR, X3323, 2.5/1.3, 6M, XUP, E0",
+                "part_number": "R708H",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, TRAY, OPT-BOX",
+                "part_number": "PF633",
+                "qty": "1"
+            },
+            {
+                "description": "PLACEMAT, SETUP, POWEREDGE, WEST",
+                "part_number": "C548K",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, WSI, PE/PV",
+                "part_number": "P071K",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, GETTING STARTED, R300, DAO/BCC",
+                "part_number": "RW575",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, TRAY, PLANAR, THIRD PARTY MAINTENANCE, R300",
+                "part_number": "TY179",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, LABEL, INFORMATION, SYSTEM, R300, ENGLAND/ENGLISH",
+                "part_number": "KM942",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, SERI, DAO/BCC",
+                "part_number": "J894K",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, SHIPPING MATERIAL, BOX, SYSTEM, R300, WITH RAILS",
+                "part_number": "KW003",
+                "qty": "1"
+            },
+            {
+                "description": "TECHNICAL SHEET, PRODUCT, INFORMATION, PE/PV, DAO/BCC",
+                "part_number": "U268D",
+                "qty": "1"
+            },
+            {
+                "description": "PRINTED WIRING ASSY, CONTROLLER, PC INTERFACE EXPRESS, SERIAL ATTACHED SCSI, SAS6/IR, ADAPTER",
+                "part_number": "JW063",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, PRINTED WIRING ASSY, RISER, CENTER, MULTI SHEET INSERTER, PEX950",
+                "part_number": "JH879",
+                "qty": "2"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, HARD DRIVE, Serial ATA, 1IN",
+                "part_number": "J105C",
+                "qty": "2"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, BLANK , HARD DRIVE, UNIVERSAL, 1IN, 2",
+                "part_number": "H7511",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, MEDIA, DIGITAL VIDEO DISK DRIVE, DMCL, V1.0",
+                "part_number": "F445F",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, HARD DRIVE, LIGHT EMITTING DIODE, R300",
+                "part_number": "WU422",
+                "qty": "1"
+            },
+            {
+                "description": "CARD (CIRCUIT), NETWORK, PERIPHERAL COMPONENT INTERCONNECT EXPRESS , COPPER, DUAL PORT",
+                "part_number": "X3959",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, SOFTWARE, RED HAT ENTERPRISE LINUX, 4.5ES, SUBSCRIPTION, 1YR",
+                "part_number": "YU858",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, BEZEL, METAL, FRONT, R300",
+                "part_number": "PH175",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CHASSIS, SYSTEM, RADEON, Power Supply Unit, R300",
+                "part_number": "PT863",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, INTERFACE, MB-ODD, R300",
+                "part_number": "DR214",
+                "qty": "1"
+            },
+            {
+                "description": "TECHNICAL SHEET, INSTALL / INSTALLATION, RED HAT ENTERPRISE LINUX, 4.7, ENTERPRISE SYSTEMS GROUP",
+                "part_number": "TTGKN",
+                "qty": "1"
+            },
+            {
+                "description": "Kit, Media, Digital Video Disk Drive, Document Object Model, V6.1",
+                "part_number": "F196N",
+                "qty": "1"
+            },
+            {
+                "description": "HARD DRIVE, 250G, EXPANDABLE SYSTEM, 7.2K, 3.5, WESTERN DIGITAL, XL320RE",
+                "part_number": "H962F",
+                "qty": "2"
+            },
+            {
+                "description": "KIT, RACK RAIL, RAPID RAIL, 1U, STATIC, V2",
+                "part_number": "UY075",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, STRAIN RELIEF, CABLE, POWER, RADEON, R300",
+                "part_number": "HW574",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, SOFTWARE, RED HAT ENTERPRISE LINUX, 4.7ES, MEDIA",
+                "part_number": "7WJXP",
+                "qty": "1"
+            },
+            {
+                "description": "CORD, POWER, 15A125V, 10FT, 5-15/C13",
+                "part_number": "0R215",
+                "qty": "2"
+            },
+            {
+                "description": "SCREW, 6-32X1/4\", FLAT HEAD, MICROSOFT, ZINC PLATED STEEL, COUNTERSINK",
+                "part_number": "1213C",
+                "qty": "8"
+            },
+            {
+                "description": "Label, Print On Demand, Hard Drive, RECTANGULAR",
+                "part_number": "FM833",
+                "qty": "2"
+            },
+            {
+                "description": "ASSEMBLY, DIGITAL VIDEO DISK DRIVE, Serial ATA, 12.7, TOSHIBA SAMSUNG STORAGE TECHNOLOGY, E",
+                "part_number": "FN679",
+                "qty": "1"
+            },
+            {
+                "description": "DUAL IN-LINE MEMORY MODULE, 4G, 667M, 512X72, 2RX4",
+                "part_number": "G548K",
+                "qty": "2"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, SAS-HDD, BUS POWERED, R300",
+                "part_number": "NN113",
+                "qty": "1"
+            }
+        ],
+        "product_number": "PowerEdge R300",
+        "tag": "HHXC0L1"
+    }
+],
+[
+    {
+        "components": [
+            {
+                "description": "Label, Barcode, Track, System, Generic",
+                "part_number": "23503",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, REGULATORY, SIDE, UNIVERSAL, BLANK , V2",
+                "part_number": "JD509",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, MOUNTING, BLANK , HARD DRIVE, 3.5, V3",
+                "part_number": "NPTFH",
+                "qty": "4"
+            },
+            {
+                "description": "Assembly, Chassis, 8HD, Trusted Platform Module, Pwa Integrated, V3, R510",
+                "part_number": "RF0CM",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, GETTING STARTED, R510, DAO/BCC",
+                "part_number": "3YPMN",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, REDUNDANT ARRAY OF INTEGRATED/ INEXPENSIVE DRIVES/DISKS, SLOT4, 8HD, 2, R510",
+                "part_number": "431NJ",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, SERI, DAO/BCC",
+                "part_number": "J894K",
+                "qty": "1"
+            },
+            {
+                "description": "PRINTED WIRING ASSY, RISER, SERVER, SERVER CHASSIS, DELL COMPUTER CORPORATION, PLN-AMEA, V2",
+                "part_number": "K869T",
+                "qty": "1"
+            },
+            {
+                "description": "CORD, POWER, 10A, 2F, C13/C14, EUROPE/EUROPEAN",
+                "part_number": "X364H",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, HARD DRIVE, Serial ATA, 3.5",
+                "part_number": "X968D",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, BEZEL, 2U, POWEREDGE, R510",
+                "part_number": "T590P",
+                "qty": "1"
+            },
+            {
+                "description": "PROCESSOR, L5520, 2.26/5.86, 8MB, XDN, D0",
+                "part_number": "K093J",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, PRINTED WIRING ASSY, PLANAR (MOTHERBOARD), W/MZR",
+                "part_number": "Y383M",
+                "qty": "1"
+            },
+            {
+                "description": "CABLE, LIGHT EMITTING DIODE, HARD DRIVE, AUXILIARY, 7",
+                "part_number": "42964",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, RACK RAIL, 2/4PST, 2U, STATIC, SLIM FORM FACTOR",
+                "part_number": "H872R",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, DIGITAL VIDEO DISK DRIVE, Serial ATA, 12.7, TEAC, ENTERPRISE SYSTEMS GROUP",
+                "part_number": "KVXM6",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Fascia, Intel, CARTON",
+                "part_number": "MY297",
+                "qty": "1"
+            },
+            {
+                "description": "PLACEMAT, SETUP, POWEREDGE, 3, WEST",
+                "part_number": "MR1W1",
+                "qty": "1"
+            },
+            {
+                "description": "HARD DRIVE, 1TRB, EXPANDABLE SYSTEM, 7.2K, 3.5, WESTERN DIGITAL, XL333RE",
+                "part_number": "50XV4",
+                "qty": "1"
+            },
+            {
+                "description": "SCREW, 6-32X.225, PHILLIPS HEAD, FLAT HEAD, BLACK",
+                "part_number": "G937K",
+                "qty": "4"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, MOTHERBOARD, POWER, OPTICAL DEVICE DRIVE, R510",
+                "part_number": "K425P",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, REDUNDANT ARRAY OF INTEGRATED/ INEXPENSIVE DRIVES/DISKS, SLOT4, 8HD, 1, R510",
+                "part_number": "T520P",
+                "qty": "1"
+            },
+            {
+                "description": "DUAL IN-LINE MEMORY MODULE, 8G, 1333, 2RX4X72, 8, 240, REGULATORY",
+                "part_number": "X3R5M",
+                "qty": "6"
+            },
+            {
+                "description": "HEATSINK, PLASTIC GRID ARRAY, 2.7X6.6, 95W, V2, R510",
+                "part_number": "6DMRF",
+                "qty": "2"
+            },
+            {
+                "description": "SHIPPING MATERIAL, CONTAINER, SYSTEM BOARD, R510, 4/8",
+                "part_number": "C4G78",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Print On Demand, Hard Drive, RECTANGULAR",
+                "part_number": "FM833",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, WSI, PE/PV",
+                "part_number": "P071K",
+                "qty": "1"
+            },
+            {
+                "description": "PRINTED WIRING ASSY, CONTROLLER, SERIAL ATTACHED SCSI, SAS6/IR, INTEGRATED",
+                "part_number": "YK838",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, BARCODE, SYS BOX, GENERIC",
+                "part_number": "23501",
+                "qty": "1"
+            },
+            {
+                "description": "PROCESSOR, L5520, 2.26/5.86, 8MB, XDN, D0",
+                "part_number": "K093J",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, OPTION, TRAY, 1/2U, 3.63H",
+                "part_number": "V21WY",
+                "qty": "1"
+            },
+            {
+                "description": "POWER SUPPLY, 750W, REDUNDANT, DELTA PRODUCTS, V2",
+                "part_number": "FN1VT",
+                "qty": "2"
+            },
+            {
+                "description": "CARD (CIRCUIT), NETWORK, PERIPHERAL COMPONENT INTERCONNECT EXPRESS , 1GB, DELL PLUS, INTEL",
+                "part_number": "G174P",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, MEDIA, DIGITAL VIDEO DISK DRIVE, DOCUMENT OBJECT MODEL, V6.4.0",
+                "part_number": "HM2MY",
+                "qty": "1"
+            }
+        ],
+        "product_number": "PowerEdge R510",
+        "tag": "DGDHXP1"
+    }
+],
+[
+    {
+        "components": [
+            {
+                "description": "BASE (ASSEMBLY OR GROUP), SERVER, SERVER CHASSIS, PER510, MACK12",
+                "part_number": "8N5C6",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, NO ITEM",
+                "part_number": "01323",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Barcode, Track, System, Generic",
+                "part_number": "23503",
+                "qty": "1"
+            },
+            {
+                "description": "Information, Software, Utility  Partition, Upgrade, Server",
+                "part_number": "2751P",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, DRIVER, SERIAL ATTACHED SCSI, PERC S100, R510",
+                "part_number": "6HJVD",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, REGULATORY, 12HD, R510, MEXICO/MEXICAN",
+                "part_number": "6KTR9",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, ENTERPRISE SYSTEMS GROUP, PER510, CHIP SET, INTEL",
+                "part_number": "73YP2",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, ENTERPRISE SYSTEMS GROUP, PER510, VIDEO",
+                "part_number": "CH0FC",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, MZR, ORIGINAL EQUIPMENT MFGR.-LITE, DIAGNOSTICS, SERVER, SERVER CHASSIS",
+                "part_number": "D424J",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, ENTERPRISE SYSTEMS GROUP, POWEREDGE, ZTE, TCM",
+                "part_number": "M27R0",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, REGULATORY, 4, 8HD, R510, MEXICO/MEXICAN",
+                "part_number": "V6Y5W",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, NETWORK, BROADCOM CORPORATION, V16.2.0",
+                "part_number": "VHWD5",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, DRIVER, DELL BKPLN",
+                "part_number": "WH190",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, MZR, ORIGINAL EQUIPMENT MFGR.-LITE, UEFI, SERVER, SERVER CHASSIS",
+                "part_number": "Y438H",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, CHASSIS, 12HD, TRUSTED PLATFORM MODULE, L5+, V2, R510",
+                "part_number": "99M9K",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CHASSIS, 12HD, TRUSTED PLATFORM MODULE, PWA INTEGRATED, R510, 3",
+                "part_number": "M575V",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, MOUNTING, BLANK , HARD DRIVE, 3.5, V3",
+                "part_number": "NPTFH",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, MACK 12",
+                "part_number": "HHKTV",
+                "qty": "1"
+            },
+            {
+                "description": "SHIP GROUP, PER510, DELL AMERICAS ORGANIZATION, MACK12",
+                "part_number": "K3R9G",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, NO ITEM",
+                "part_number": "01323",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, NO DELL DIRECT CATALOG",
+                "part_number": "08123",
+                "qty": "1"
+            },
+            {
+                "description": "PREPARATION MATERIAL, DEVIATION, SERVICE CHARGE, INCRS #1",
+                "part_number": "2260R",
+                "qty": "1"
+            },
+            {
+                "description": "PLACEMAT, SETUP, POWEREDGE, 3, WEST",
+                "part_number": "3H0C4",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, GETTING STARTED, R510, DAO/BCC",
+                "part_number": "3YPMN",
+                "qty": "1"
+            },
+            {
+                "description": "PREPARATION MATERIAL, DEVIATION, SERVICE CHARGE, INCRS #2",
+                "part_number": "7260R",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, SERI, DAO/BCC",
+                "part_number": "J894K",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Fascia, Intel, CARTON",
+                "part_number": "MY297",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, WSI, PE/PV",
+                "part_number": "P071K",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, OPTION, TRAY, 1/2U, 3.63H",
+                "part_number": "V21WY",
+                "qty": "1"
+            },
+            {
+                "description": "CUSTOMER KIT, DVDRW, BARE, OPTIPLEX, SMITH, TOSHIBA SAMSUNG STORAGE TECHNOLOGY",
+                "part_number": "YMVYX",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, DUAL IN-LINE MEMORY MODULE, 64GB, 2R, 8X8G, RDIMM, L",
+                "part_number": "3JHRF",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, MEMORY BOARD, MEMORY, LOW VOLTAGE",
+                "part_number": "2WY0H",
+                "qty": "1"
+            },
+            {
+                "description": "DUAL IN-LINE MEMORY MODULE, 8GB, 1333, 2RX4, 8, 240, R, LOW VOLTAGE",
+                "part_number": "P9RN2",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, Memory     Board, Memory, CHAN3",
+                "part_number": "W885J",
+                "qty": "1"
+            },
+            {
+                "description": "Information, Memory Board, Memory, CHAN3",
+                "part_number": "X527J",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, Memory     Board, Memory, Central         Processor Unit, 2 PCE",
+                "part_number": "X539J",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, PROCESSOR, E5620, 2.4, XWM, 80W",
+                "part_number": "CPNJN",
+                "qty": "1"
+            },
+            {
+                "description": "PROCESSOR, E5620, 2.4/5.86, 12M, XWM, B1",
+                "part_number": "60HT4",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, THERMAL, SERVER, SERVER CHASSIS, PER510, DUAL-PRC",
+                "part_number": "2HPVT",
+                "qty": "1"
+            },
+            {
+                "description": "HEATSINK, PLASTIC GRID ARRAY, 2.7X6.6, 95W, V2, R510",
+                "part_number": "6DMRF",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, PROCESSOR, E5620, 2.4, XWM, 80W, SECOND",
+                "part_number": "9MYC2",
+                "qty": "1"
+            },
+            {
+                "description": "PROCESSOR, E5620, 2.4/5.86, 12M, XWM, B1",
+                "part_number": "60HT4",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, DELLSTAR   MULTISELECT",
+                "part_number": "DN458",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, CABLE, POWEREDGE EXPANDABLE RAID CONTROLLER NUMBER, BATTERY, R510",
+                "part_number": "PDJWX",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, POWEREDGE EXPANDABLE RAID CONTROLLER NUMBER, BATTERY, R410",
+                "part_number": "R605K",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, CABLE, PERC7, S4, 12HD, R510",
+                "part_number": "C58WM",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, RAID7, S4, 12HD, 2, R510",
+                "part_number": "P745P",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, LIGHT EMITTING DIODE, PERC 7, R410",
+                "part_number": "T871M",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, PERC7, S4, 12HD, 1, R510",
+                "part_number": "Y674P",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, CARD (CIRCUIT), CONTROLLER, H700I, 512, NVD",
+                "part_number": "J1FW8",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, DRIVER, H700INT, SAS-RAID",
+                "part_number": "24F4C",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARD (CIRCUIT), PERCH700-I, 512M, NVD",
+                "part_number": "CNXVV",
+                "qty": "1"
+            },
+            {
+                "description": "BATTERY, PRIMARY, 7WHR, 1C, LITHIUM ION, PERCI",
+                "part_number": "NU209",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Software, NULL-OS, NFI/DIB",
+                "part_number": "T725F",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, DELL COMPUTER CORPORATION, NULL-OS",
+                "part_number": "1U112",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, CARD (CIRCUIT), NETWORK, PERIPHERAL COMPONENT INTERCONNECT EXPRESS , 1GB, DELL PLUS, INTEL",
+                "part_number": "G177P",
+                "qty": "1"
+            },
+            {
+                "description": "CARD (CIRCUIT), NETWORK, PERIPHERAL COMPONENT INTERCONNECT EXPRESS , 1GB, DELL PLUS, INTEL",
+                "part_number": "1P8D1",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, NETWORK, INTEL, V12.5.5",
+                "part_number": "XDPR7",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, PRINTED WIRING ASSY, RISER, SERVER, SERVER CHASSIS, DELL COMPUTER CORPORATION, IDRAC6 ENT",
+                "part_number": "T902J",
+                "qty": "1"
+            },
+            {
+                "description": "PRINTED WIRING ASSY, RISER, SERVER, SERVER CHASSIS, DELL COMPUTER CORPORATION, PLN-AMEA, V2",
+                "part_number": "K869T",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, PRINTED WIRING ASSY, IDRAC6 XPRS",
+                "part_number": "X523K",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, PRINTED WIRING ASSY, PLANAR (MOTHERBOARD), W/MZR",
+                "part_number": "Y383M",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, NO ODD",
+                "part_number": "TY510",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, BEZEL, 2U, POWEREDGE, R510",
+                "part_number": "4DJP1",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, BEZEL, 2U, POWEREDGE, R510",
+                "part_number": "T590P",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, MEDIA, DIGITAL VIDEO DISK DRIVE, DOCUMENT OBJECT MODEL, PER510",
+                "part_number": "K60MR",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, MEDIA, DIGITAL VIDEO DISK DRIVE, DOCUMENT OBJECT MODEL, V6.5.0",
+                "part_number": "JJ4YX",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Cable, C42, ASSR0, R510",
+                "part_number": "57V01",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, RACK RAIL, RDYRL, 2U, SLIDE, SLIM FORM FACTOR",
+                "part_number": "Y246R",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, RACK RAIL, RDYRL, 2U, SLIDE, SLIM FORM FACTOR, V2",
+                "part_number": "D20YT",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, POWER SUPPLY, 750W, REDUNDANT, DELTA PRODUCTS",
+                "part_number": "38X2K",
+                "qty": "1"
+            },
+            {
+                "description": "POWER SUPPLY, 750W, REDUNDANT, DELTA PRODUCTS, V2",
+                "part_number": "FN1VT",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, CORD, POWER, 10A, 4M, US/EU, JUMPER",
+                "part_number": "J984M",
+                "qty": "1"
+            },
+            {
+                "description": "CORD, POWER, 10A, 4M, C13/C14, EUROPE/EUROPEAN",
+                "part_number": "Y086H",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, CORD, POWER, 10A, 4M, US/EU, JUMPER",
+                "part_number": "J984M",
+                "qty": "1"
+            },
+            {
+                "description": "CORD, POWER, 10A, 4M, C13/C14, EUROPE/EUROPEAN",
+                "part_number": "Y086H",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, SOFTWARE, MEDIA, RED HAT ENTERPRISE LINUX, 6.X, OPTIONAL",
+                "part_number": "6TK7R",
+                "qty": "1"
+            },
+            {
+                "description": "TECHNICAL SHEET, INSTALL / INSTALLATION, POWEREDGE, LINUX, WORLD WIDE",
+                "part_number": "6VJ03",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, SOFTWARE, RED HAT ENTERPRISE LINUX, 6, MEDIA, OPTIONAL",
+                "part_number": "F7G30",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, HARD DRIVE, 2TRB, 3.5, EXPANDABLE SYSTEM, 7.2K, HITACHI",
+                "part_number": "MNJ9X",
+                "qty": "1"
+            },
+            {
+                "description": "HARD DRIVE, 2T, EXPANDABLE SYSTEM, 7.2K, 3.5, H-JK, E/C",
+                "part_number": "0H6GP",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, BACKPLANE HD",
+                "part_number": "3556E",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Print On Demand, Hard Drive, RECTANGULAR",
+                "part_number": "FM833",
+                "qty": "1"
+            },
+            {
+                "description": "SCREW, 6-32X.225, PHILLIPS HEAD, FLAT HEAD, BLACK",
+                "part_number": "G937K",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, HARD DRIVE, Serial ATA, 3.5",
+                "part_number": "X968D",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, SOFTWARE, RED HAT ENTERPRISE LINUX, 2SKT, AUE, 1GST, 1YR",
+                "part_number": "HPG0F",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, DOCUMENTATION, RED HAT ENTERPRISE LINUX, AUE",
+                "part_number": "V1D4X",
+                "qty": "1"
+            }
+        ],
+        "product_number": "PowerEdge R510",
+        "tag": "7Z4Z6S1"
+    }
+],
+[
+    {
+        "components": [
+            {
+                "description": "LABEL, REGULATORY, SIDE, UNIVERSAL, BLANK , V2",
+                "part_number": "JD509",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Barcode, Track, System, Generic",
+                "part_number": "23503",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, MOUNTING, BLANK , HARD DRIVE, 3.5, V3",
+                "part_number": "NPTFH",
+                "qty": "4"
+            },
+            {
+                "description": "Assembly, Chassis, 8HD, Trusted Platform Module, Pwa Integrated, V3, R510",
+                "part_number": "RF0CM",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Print On Demand, Hard Drive, RECTANGULAR",
+                "part_number": "FM833",
+                "qty": "1"
+            },
+            {
+                "description": "POWER SUPPLY, 750W, REDUNDANT, DELTA PRODUCTS, V2",
+                "part_number": "FN1VT",
+                "qty": "2"
+            },
+            {
+                "description": "ASSEMBLY, DIGITAL VIDEO DISK DRIVE, 8, 12.7, Serial ATA, ENTERPRISE SYSTEMS GROUP, PLDS",
+                "part_number": "MKT6V",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Fascia, Intel, CARTON",
+                "part_number": "MY297",
+                "qty": "1"
+            },
+            {
+                "description": "SCREW, M3X.05X4.5MM, FLAT HEAD, MACHINE SCREW, ZINC PLATED STEEL",
+                "part_number": "R9445",
+                "qty": "7"
+            },
+            {
+                "description": "ASSEMBLY, BEZEL, 2U, POWEREDGE, R510",
+                "part_number": "T590P",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, OPTION, TRAY, 1/2U, 3.63H",
+                "part_number": "V21WY",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, RACK RAIL, 2/4PST, 2U, STATIC, SLIM FORM FACTOR",
+                "part_number": "H872R",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARD (CIRCUIT), CONTROLLER, PERC6II, SERIAL ATTACHED SCSI, NOSLD",
+                "part_number": "T954J",
+                "qty": "1"
+            },
+            {
+                "description": "PROCESSOR, E5620, 2.4/5.86, 12M, XWM, B1",
+                "part_number": "60HT4",
+                "qty": "1"
+            },
+            {
+                "description": "HEATSINK, PLASTIC GRID ARRAY, 2.7X6.6, 95W, V2, R510",
+                "part_number": "6DMRF",
+                "qty": "2"
+            },
+            {
+                "description": "HARD DRIVE, 300G, SAS6, 10K, 2.5, S-FF, E/C",
+                "part_number": "T871K",
+                "qty": "1"
+            },
+            {
+                "description": "DUAL IN-LINE MEMORY MODULE, 4G, 1333, 2RX8, 8, 240, REGULATORY, LOW VOLTAGE",
+                "part_number": "9J5WF",
+                "qty": "6"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, HARD DRIVE, SAS-SATAU, 3.5",
+                "part_number": "F238F",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, REDUNDANT ARRAY OF INTEGRATED/ INEXPENSIVE DRIVES/DISKS, SLOT4, 8HD, 1, R510",
+                "part_number": "T520P",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, BARCODE, SYS BOX, GENERIC",
+                "part_number": "23501",
+                "qty": "1"
+            },
+            {
+                "description": "CABLE, LIGHT EMITTING DIODE, HARD DRIVE, AUXILIARY, 7",
+                "part_number": "42964",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, MOTHERBOARD, POWER, OPTICAL DEVICE DRIVE, R510",
+                "part_number": "K425P",
+                "qty": "1"
+            },
+            {
+                "description": "PRINTED WIRING ASSY, RISER, SERVER, SERVER CHASSIS, DELL COMPUTER CORPORATION, AMEA, V2",
+                "part_number": "J675T",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, POWEREDGE EXPANDABLE RAID CONTROLLER NUMBER, BATTERY, R410",
+                "part_number": "R605K",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, SERI, DAO/BCC",
+                "part_number": "J894K",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, WSI, PE/PV",
+                "part_number": "P071K",
+                "qty": "1"
+            },
+            {
+                "description": "PROCESSOR, E5620, 2.4/5.86, 12M, XWM, B1",
+                "part_number": "60HT4",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, CONTAINER, SYSTEM BOARD, R510, 4/8",
+                "part_number": "C4G78",
+                "qty": "1"
+            },
+            {
+                "description": "CORD, POWER, 10A, 2F, C13/C14, EUROPE/EUROPEAN",
+                "part_number": "X364H",
+                "qty": "1"
+            },
+            {
+                "description": "CARD (CIRCUIT), NETWORK, PERIPHERAL COMPONENT INTERCONNECT EXPRESS , 1GB, DELL PLUS, INTEL",
+                "part_number": "1P8D1",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, REDUNDANT ARRAY OF INTEGRATED/ INEXPENSIVE DRIVES/DISKS, SLOT4, 8HD, 2, R510",
+                "part_number": "431NJ",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, MEDIA, DIGITAL VIDEO DISK DRIVE, DOCUMENT OBJECT MODEL, V6.5.0",
+                "part_number": "JJ4YX",
+                "qty": "1"
+            },
+            {
+                "description": "BATTERY, PRIMARY, 7WHR, 1C, LITHIUM ION, PERCI",
+                "part_number": "NU209",
+                "qty": "1"
+            },
+            {
+                "description": "PLACEMAT, SETUP, POWEREDGE, 3, WEST",
+                "part_number": "3H0C4",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, GETTING STARTED, R510, DAO/BCC",
+                "part_number": "3YPMN",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, BRACKET, METAL, ADAPTER, 2.5-3.5, V2",
+                "part_number": "9W8C4",
+                "qty": "1"
+            },
+            {
+                "description": "OVERPACK KIT, WS8R2SE, ENGLAND/ENGLISH",
+                "part_number": "CP18X",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Certificate Of Authenticity, WS8R2SE, Print On Demand",
+                "part_number": "NMFXX",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, PRINTED WIRING ASSY, PLANAR (MOTHERBOARD), W/MZR",
+                "part_number": "Y383M",
+                "qty": "1"
+            }
+        ],
+        "product_number": "PowerEdge R510",
+        "tag": "978SRR1"
+    }
+],
+[
+    {
+        "components": [
+            {
+                "description": "MODULE, CHASSIS, 2.5HD, 1U, PER610",
+                "part_number": "FU340",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, MOUNTING, BLANK , HARD DRIVE, 2.5, V3",
+                "part_number": "TW13J",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CHASSIS, 2.5HD, 1U, PER610",
+                "part_number": "YPDP1",
+                "qty": "1"
+            },
+            {
+                "description": "BASE (ASSEMBLY OR GROUP), SERVER, SERVER CHASSIS, PER610",
+                "part_number": "PT230",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Barcode, Track, System, Generic",
+                "part_number": "23503",
+                "qty": "1"
+            },
+            {
+                "description": "Information, Software, Utility  Partition, Upgrade, Server",
+                "part_number": "2751P",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, REGULATORY, R610, MEXICO/MEXICAN",
+                "part_number": "J622R",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, ENTERPRISE SYSTEMS GROUP, POWEREDGE, VIDEO, PER610",
+                "part_number": "M618G",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, MZR, FIRMWARE, RLBK, SERVER, SERVER CHASSIS",
+                "part_number": "P095G",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, ENTERPRISE SYSTEMS GROUP, POWEREDGE, CHIP SET, PER610",
+                "part_number": "P327G",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, MZR, DIAGS, SERVER, SERVER CHASSIS",
+                "part_number": "R609F",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, MZR, DRIVERS (SOFTWARE), SERVER, SERVER CHASSIS",
+                "part_number": "T891F",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, MZR, UEFI, SERVER, SERVER CHASSIS",
+                "part_number": "U521F",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, NETWORK, BROADCOM CORPORATION, V16.2.0",
+                "part_number": "VHWD5",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, DRIVER, DELL BKPLN",
+                "part_number": "WH190",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, PRINTED WIRING ASSY, PLANAR, R610, TRUSTED PLATFORM MODULE, MULTI SHEET INSERTER, V2",
+                "part_number": "XTKGT",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, PRINTED WIRING ASSY, PLANAR (MOTHERBOARD), MZR, R610, MICRO STAR INTERNATIONAL CO LTD, V2",
+                "part_number": "1W9FG",
+                "qty": "1"
+            },
+            {
+                "description": "LABEL, INFORMATION, WESTMERE, VALENCIA",
+                "part_number": "27FK4",
+                "qty": "1"
+            },
+            {
+                "description": "SHIP GROUP, PER610, NORTH, NORTH, DELL AMERICAS ORGANIZATION",
+                "part_number": "FU344",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, NO ITEM",
+                "part_number": "01323",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, NO DELL DIRECT CATALOG",
+                "part_number": "08123",
+                "qty": "1"
+            },
+            {
+                "description": "PREPARATION MATERIAL, DEVIATION, SERVICE CHARGE, INCRS #1",
+                "part_number": "2260R",
+                "qty": "1"
+            },
+            {
+                "description": "PLACEMAT, SETUP, POWEREDGE, 3, WEST",
+                "part_number": "3H0C4",
+                "qty": "1"
+            },
+            {
+                "description": "PREPARATION MATERIAL, DEVIATION, SERVICE CHARGE, INCRS #2",
+                "part_number": "7260R",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, CONTAINER, SYSTEM, R610, WITH RAILS",
+                "part_number": "C302D",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, SERI, DAO/BCC",
+                "part_number": "J894K",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Fascia, Intel, CARTON",
+                "part_number": "MY297",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, PRODUCT, INFORMATION, WSI, PE/PV",
+                "part_number": "P071K",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, TRAY, OPT-BOX",
+                "part_number": "PF633",
+                "qty": "1"
+            },
+            {
+                "description": "GUIDE, GETTING STARTED, PER610, DAO/BCC",
+                "part_number": "R465D",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, DUAL IN-LINE MEMORY MODULE, 8GB, 2R, 2X4G, RDIMM, LOW VOLTAGE",
+                "part_number": "0WG2W",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, MEMORY BOARD, MEMORY, LOW VOLTAGE",
+                "part_number": "2WY0H",
+                "qty": "1"
+            },
+            {
+                "description": "DUAL IN-LINE MEMORY MODULE, 4G, 1333, 2RX8, 8, 240, REGULATORY, LOW VOLTAGE",
+                "part_number": "9J5WF",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, Memory     Board, Memory, CHAN2",
+                "part_number": "X530J",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, MEMORY BOARD, MEMORY, CHAN2",
+                "part_number": "W884J",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, Sales, Lan  On Motherboard, On Board",
+                "part_number": "PY182",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, PROCESSOR, E5620, 2.4, XWM, 80W",
+                "part_number": "CPNJN",
+                "qty": "1"
+            },
+            {
+                "description": "PROCESSOR, E5620, 2.4/5.86, 12M, XWM, B1",
+                "part_number": "60HT4",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Inofrmation, No Second  Processor",
+                "part_number": "21RMU",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, THERMAL, SERVER, SERVER CHASSIS, PER610, SGL-PRC",
+                "part_number": "N782P",
+                "qty": "1"
+            },
+            {
+                "description": "PANEL, FILLER, PRC/DIMM, PER610",
+                "part_number": "J065J",
+                "qty": "1"
+            },
+            {
+                "description": "PANEL, FILLER, FAN, PER610",
+                "part_number": "NY176",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, HEATSINK, CENTRAL PROCESSOR UNIT, PER610",
+                "part_number": "TR995",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, DELLSTAR   MULTISELECT",
+                "part_number": "DN458",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, CARD (CIRCUIT), CONTROLLER, PERC6I-INTG, NOSLED",
+                "part_number": "M878J",
+                "qty": "1"
+            },
+            {
+                "description": "BATTERY, PRIMARY, 7WHR, 1C, LITHIUM ION, PERCI",
+                "part_number": "NU209",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, DRIVER, PERC6I-INT, SAS-RAID",
+                "part_number": "PK165",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARD (CIRCUIT), CONTROLLER, PERC6II, SERIAL ATTACHED SCSI, NOSLD",
+                "part_number": "T954J",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, ASSEMBLY, CABLE, POWEREDGE EXPANDABLE RAID CONTROLLER NUMBER, SERIAL ATTACHED SCSI, PER610",
+                "part_number": "P872N",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, SERIAL ATTACHED SCSI, DOUBLE SPEED, 3G, R610",
+                "part_number": "FTTNX",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CABLE, SERIAL ATTACHED SCSI, 4X, 3G, R610",
+                "part_number": "RF5PF",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, ENABLE     POWER SAVINGS",
+                "part_number": "P913K",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Software, NO-OS",
+                "part_number": "KD483",
+                "qty": "1"
+            },
+            {
+                "description": "SERVICE CHARGE, SOFTWARE, DELL COMPUTER CORPORATION, NULL-OS",
+                "part_number": "1U112",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, PRINTED WIRING ASSY, RISER, SERVER, SERVER CHASSIS, DELL COMPUTER CORPORATION, IDRAC6 ENT",
+                "part_number": "T902J",
+                "qty": "1"
+            },
+            {
+                "description": "PRINTED WIRING ASSY, RISER, SERVER, SERVER CHASSIS, DELL COMPUTER CORPORATION, PLN-AMEA, V2",
+                "part_number": "K869T",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, DIGITAL VIDEO DISK DRIVE, Serial ATA, 12.7, TEAC, E",
+                "part_number": "51XC0",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, DIGITAL VIDEO DISK DRIVE, Serial ATA, 12.7, TEAC, ENTERPRISE SYSTEMS GROUP",
+                "part_number": "KVXM6",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, BEZEL, 1U, PER610",
+                "part_number": "PT524",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, BEZEL, 1U, POWEREDGE",
+                "part_number": "TY293",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Media, Digital Video    Disk Drive, Data Management    Console, World Wide",
+                "part_number": "9MV92",
+                "qty": "1"
+            },
+            {
+                "description": "Kit, Media, Digital Video Disk Drive, Data Management Console, V2.0.2",
+                "part_number": "KR8M4",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, MEDIA, DIGITAL VIDEO DISK DRIVE, DOCUMENT OBJECT MODEL, PER610",
+                "part_number": "H957F",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, MEDIA, DIGITAL VIDEO DISK DRIVE, DOCUMENT OBJECT MODEL, V6.5.0",
+                "part_number": "JJ4YX",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, C3, MSSR1   PER610",
+                "part_number": "RM219",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, RACK RAIL, 2/4PST, 1U/2U, STATIC",
+                "part_number": "P819D",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, RACK RAIL, 2/4PST, 1U/2U, STATIC",
+                "part_number": "J643G",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, POWER SUPPLY, 502W, REDUNDANT, ASTEC",
+                "part_number": "C472K",
+                "qty": "1"
+            },
+            {
+                "description": "POWER SUPPLY, 502W, REDUNDANT, ASTEC, V3",
+                "part_number": "J38MN",
+                "qty": "1"
+            },
+            {
+                "description": "Module, Information, NO PWR CORD",
+                "part_number": "GX863",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, CORD, POWER, 10A, 2F, US/EU, JUMPER",
+                "part_number": "J983M",
+                "qty": "1"
+            },
+            {
+                "description": "CORD, POWER, 10A, 2F, C13/C14, EUROPE/EUROPEAN",
+                "part_number": "X364H",
+                "qty": "1"
+            },
+            {
+                "description": "MODULE, HARD DRIVE, 250GB, EXPANDABLE SYSTEM, 2.5IN, TSHB",
+                "part_number": "W618J",
+                "qty": "1"
+            },
+            {
+                "description": "INFORMATION, BACKPLANE HD",
+                "part_number": "3556E",
+                "qty": "1"
+            },
+            {
+                "description": "Label, Print On Demand, Hard Drive, RECTANGULAR",
+                "part_number": "FM833",
+                "qty": "1"
+            },
+            {
+                "description": "SCREW, M3X.05X4.5MM, FLAT HEAD, MACHINE SCREW, ZINC PLATED STEEL",
+                "part_number": "R9445",
+                "qty": "1"
+            },
+            {
+                "description": "HARD DRIVE, 250G, EXPANDABLE SYSTEM, 7.2K, 2.5, T-CAP, E/C",
+                "part_number": "T7YWV",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, HARD DRIVE, Serial ATA, 2.5",
+                "part_number": "XN394",
+                "qty": "1"
+            }
+        ],
+        "product_number": "PowerEdge R610",
+        "tag": "9DKYWQ1"
+    }
+],
+[
+    {
+        "components": [
+            {
+                "description": "KIT, CABLE, TECHNICAL SHEET, PV22XS, 4M, WIDE TO NARROW, V2",
+                "part_number": "JJ003",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, CARD (CIRCUIT), S, 39160, NO CONTROLLER/WITH CABLES, TBU, LINEAR TAPE OPEN",
+                "part_number": "MM825",
+                "qty": "1"
+            },
+            {
+                "description": "ASSEMBLY, CARRIER, MAGAZINE COLUMN, PV124T, RIGHT",
+                "part_number": "HC835",
+                "qty": "1"
+            },
+            {
+                "description": "Kit, Tape, Magnetic, LTO3, 5PK",
+                "part_number": "HC593",
+                "qty": "4"
+            },
+            {
+                "description": "CORD, POWER, 125V, 10FT, SJT, UNSHIELDED",
+                "part_number": "6878T",
+                "qty": "1"
+            },
+            {
+                "description": "CONNECTOR, TERMINATOR, 68P, LOW VOLTAGE DIFFERENTIATE SINGLE END, .05, G, SCREW",
+                "part_number": "78PEP",
+                "qty": "1"
+            },
+            {
+                "description": "Guide, Product, Information     Poweredge/powervault, DAO/BCC",
+                "part_number": "NP544",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, CONTAINER, SYSTEM BOARD, LARGE, PV124T",
+                "part_number": "P9931",
+                "qty": "1"
+            },
+            {
+                "description": "SHIPPING MATERIAL, TRAY, OPTION, PV124T",
+                "part_number": "W9334",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, RACK RAIL, RAPID RAIL, 2U, STRAIGHT, PV124T",
+                "part_number": "R8394",
+                "qty": "1"
+            },
+            {
+                "description": "TAPE, CLEAN, LINEAR TAPE OPEN, V3",
+                "part_number": "1X024",
+                "qty": "1"
+            },
+            {
+                "description": "Label, LTO3, Media, 1-200",
+                "part_number": "FC763",
+                "qty": "1"
+            },
+            {
+                "description": "KIT, TAPE BACKUP UNIT, 400/800G, 2U, BARCODE, 124T, R",
+                "part_number": "UH301",
+                "qty": "1"
+            }
+        ],
+        "product_number": "PowerVault 124T",
+        "tag": "82P02C1"
+    }
+]
+]

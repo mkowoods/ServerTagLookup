@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>ServerTagLookup</title>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" media="screen" href="/static/handsontable-master/dist/handsontable.full.min.css">
+</head>
+<body>
+    <div id="banner"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div id = "sheet"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="rowCt">
+                <div>
+                    <span>Rows: </span><span id="rc-r">0</span>
+                </div>
+                <div>
+                    <span>Empty Rows: </span><span id="rc-er">0</span>
+                </div>
+                <div>
+                    <span>Active Rows: </span><span id="rc-ar">0</span>
+                </div>
+            </div>
+            Upload Button
+
+            Status Update
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="./static/handsontable-master/dist/handsontable.full.min.js"></script>
+
+    <script>
+        var data = [[]];
+
+
+
+        var container = document.getElementById('sheet');
+        var hot = new Handsontable(container, {
+            data: data,
+            minRows: 25,
+            minCols: 3,
+            rowHeaders: true,
+            colHeaders: ["SKU", "Internal SKU", "Manf"],
+            contextMenu: true
+            //afterChange: rowCt
+        });
+
+        hot.addHook('afterChange', function(change, source){
+                //console.log(change, source)
+                var rows = hot.countRows()
+                var emptyRows = hot.countEmptyRows()
+                var activeRows = rows - emptyRows
+                $("#rc-r").text(rows)
+                $("#rc-er").text(emptyRows)
+                $("#rc-ar").text(activeRows)
+        })
+
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+#banner {
+    height: 50px;
+    background-color: #f5f5f5;
+}
+
+.form-group{
+    padding: 10px;
+}
+
+#log {
+    height: 250px;
+    overflow-y: scroll;
+    border: 1px solid #e0dcbf;
+}
