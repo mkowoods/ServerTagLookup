@@ -67,7 +67,7 @@ class DellLookUp(object):
         if self._mem_header_data == {}:
             ssa = self.dom.xpath("//div[@id='subSectionA']/div/div/div/table")
             if not ssa:
-                logging.error("Table in SubsectionA not found")
+                logging.error("DellServerTagLookup.header_data - Table in SubsectionA not found for tag %s"%self.tag)
                 return {}
 
             cells = ssa[0].findall('.//td')
@@ -80,6 +80,7 @@ class DellLookUp(object):
                 self._mem_header_data[label] = value
                 if label == 'Computer Model':
                     self._mem_header_data['product_number'] = value
+            print self.tag, "||||", self.header_data
         return self._mem_header_data
 
     @property
@@ -156,7 +157,7 @@ class HPLookUp(object):
 class ServerTagLookUp:
 
     def __init__(self, tags, manf):
-        assert manf in ['hp', 'dell'], 'Unknown Manufacturer'
+        assert manf in ['hp', 'dell'], 'Unknown Manufacturer %s'%manf
         scrapers = {'hp': HPLookUp, 'dell': DellLookUp}
 
         self.tags = tags
