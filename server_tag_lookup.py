@@ -27,7 +27,7 @@ def time_to_connect_logger(ttc):
     logger('Time to Connect: %.2f secs' % ttc)
 
 
-def get_dom(url):
+def get_resp(url):
     #print 'starting connection',  url
     headers = {"User-Agent": "Mozilla/5.0 (X11; Linux i686)\
                                AppleWebKit/537.36 (KHTML, like Gecko)\
@@ -37,9 +37,8 @@ def get_dom(url):
     urlfetch.set_default_fetch_deadline(60)
     resp = requests.get(url, headers = headers)
     if resp.status_code == 200:
-        dom = html.fromstring(resp.text)
         time_to_connect_logger(time.time() - start)
-        return dom
+        return resp
     else:
         raise ValueError('Status Code is %s for url %s'%(str(resp.status_code), url))
 
@@ -49,26 +48,39 @@ def get_text(el):
 class DellDomChange(Exception):
     pass
 
+class DellTagNotFound(Exception):
+    pass
 
 class DellLookUp(object):
     def __init__(self, tag):
         self.tag = tag
-        self.dom = get_dom(self.url)
+        self.resp = get_resp(self.url)
+        self.dom = html.fromstring(self.resp.text)
         self._mem_header_data = {}
         self._mem_detail_data = []
 
+        if self.resp.url != self.url:
+            logging.critical("Dell Request was redirected: to %s"%self.resp.url)
+
     @property
     def url(self):
-        url_template = "http://www.dell.com/support/home/us/en/19/product-support/servicetag/%s/configuration"
+        url_template = "http://www.dell.com/support/home/us/en/19/product-support/servicetag/%s/configuration?s=BSD"
         return url_template % self.tag
 
     @property
     def header_data(self):
+        #added
+        if 'IsInvalidSelection=True' in self.resp.url:
+            raise DellTagNotFound("Redirected to 'Invalid Selection URL'")
+
+
         if self._mem_header_data == {}:
             ssa = self.dom.xpath("//div[@id='subSectionA']/div/div/div/table")
             if not ssa:
-                logging.error("DellServerTagLookup.header_data - Table in SubsectionA not found for tag %s"%self.tag)
-                return {}
+                err_msg = "Dell Header Table in not found for tag %s"%self.tag
+                logging.critical(err_msg)
+                raise DellDomChange(err_msg)
+                #return {}
 
             cells = ssa[0].findall('.//td')
             if not cells:
@@ -117,7 +129,8 @@ class DellLookUp(object):
 class HPLookUp(object):
     def __init__(self, tag):
         self.tag = tag
-        self.dom = get_dom(self.url)
+        self.resp = get_resp(self.url)
+        self.dom = html.fromstring(self.resp.text)
         self._mem_header_data = {}
         self._mem_detail_data = []
 

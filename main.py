@@ -85,25 +85,30 @@ class ServerTagLookUpAPI(Handler):
         #TODO: Should do basic validation of inputs before moving using assert
 
         json_payload = None
+        error_payload = None
         status_code = 200
 
         try:
             lookup = stl.ServerTagLookUp([tag], manf)
             json_payload = lookup.results
         except ValueError as err:
-            payload = {'tag': tag, 'message': str(err.message)}
-            logging.error('Value Error Raise on Tag: %(tag)s, Arg: %(message)s' % payload)
+            error_payload = {'tag': tag, 'message': str(err.message)}
+            logging.error('Value Error Raise on Tag: %(tag)s, Arg: %(message)s' % error_payload)
         except stl.DellDomChange as err:
-            payload = {'tag': tag, 'message': str(err.message)}
-            logging.error('DellDomChange Error Raised on Tag: %(tag)s, Message: %(message)s' % payload)
+            error_payload= {'tag': tag, 'message': str(err.message)}
+            logging.error('DellDomChange Error Raised on Tag: %(tag)s, Message: %(message)s' % error_payload)
+        except stl.DellTagNotFound as err:
+            error_payload = {'tag' : tag, 'message' : str(err.message)}
+            logging.error('DellTagNotFound Error Raised on Tag: %(tag)s, Message: %(message)s' % error_payload)
         except Exception as err:
-            payload = {'type': str(err.__class__), 'message' : str(err.message), 'tag': tag, 'manf': manf}
-            logging.exception('Unexpected Exception Type: %(type)s, Message: %(message)s, tag: %(tag)s, manf: %(manf)s' % payload)
+            error_payload = {'type': str(err.__class__), 'message' : str(err.message), 'tag': tag, 'manf': manf}
+            logging.exception('Unexpected Exception Type: %(type)s, Message: %(message)s, tag: %(tag)s, manf: %(manf)s' % error_payload)
 
         if json_payload is None:
             json_payload = [{'tag': tag,
                             'product_number': None,
-                            'components' : []
+                            'components' : [],
+                             'message' : error_payload['message']
                             }]
             status_code = 400
         return json_payload, status_code

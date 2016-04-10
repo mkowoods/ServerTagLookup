@@ -202,6 +202,10 @@
                     convertResponseToRows(data[0]);
                 });
                 request.fail(function (jqXHR, textStatus) {
+                    data = jqXHR.responseJSON;
+                    if (data !== undefined) {
+                        textStatus = textStatus + " " + data[0].message
+                    }
                     updateLog("Request Failed: " + textStatus + " "+tag);
                     var $te = $("#tags-errors");
                     var tags_errors = parseInt($te.text(), 10);
