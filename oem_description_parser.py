@@ -1,9 +1,6 @@
 __author__ = 'mwoods'
 
 
-# TODO: Try rewriting as regex and see if it boosts the speed. Current approach does O(n)....
-# work to do the split but constant time work for the lookup. regex may just do O(1).
-
 
 def _check_is_included_dell(description_list):
     """basic if-then tree to work through the list of ASSEMBLY descriptors and flag
