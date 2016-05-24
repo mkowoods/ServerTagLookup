@@ -1,11 +1,21 @@
 from lxml import html
 import requests
+#import requests_toolbelt.adapters.appengine
 import time
 from google.appengine.api import urlfetch
 import models
 import logging
 
+
+#requests_toolbelt.adapters.appengine.monkeypatch()
+
 __author__ = 'mwoods'
+
+url ="https://www.google.com"
+result = urlfetch.fetch(url)
+if result.status_code == 200:
+    print result.content
+
 
 
 # TODO: Look into using the threading module
@@ -28,6 +38,14 @@ def time_to_connect_logger(ttc):
 
 
 def get_resp(url):
+
+    """
+    https://cloud.google.com/appengine/docs/python/issue-requests#issuing_an_http_request
+    Issuing an HTTPS request
+
+    To issue an HTTPS request, set the validate_certificate parameter to true when calling the urlfetch.fetch() method.
+    """
+
     #print 'starting connection',  url
     headers = {"User-Agent": "Mozilla/5.0 (X11; Linux i686)\
                                AppleWebKit/537.36 (KHTML, like Gecko)\
@@ -35,12 +53,37 @@ def get_resp(url):
                                Safari/537.36"}
     start = time.time()
     urlfetch.set_default_fetch_deadline(60)
+    #TODO: might need to swithc to urlfetch for https requests.
     resp = requests.get(url, headers = headers)
+    #resp = urlfetch.fetch(url, headers = headers, validate_certificate=True)
     if resp.status_code == 200:
         time_to_connect_logger(time.time() - start)
         return resp
     else:
         raise ValueError('Status Code is %s for url %s'%(str(resp.status_code), url))
+
+#TODO: Cleanup this is a quick and dirty hack, because I got sick of looking at how to integrate requests API
+#into GAE, probably need to install requests_toolbox...
+def get_https_resp(url):
+
+    class ResponseObj:
+        url = None
+        text = None
+
+
+    headers = {"User-Agent": "Mozilla/5.0 (X11; Linux i686)\
+        AppleWebKit/537.36 (KHTML, like Gecko)\
+        Chrome/39.0.2171.95\
+        Safari/537.36"}
+    urlfetch.set_default_fetch_deadline(60)
+    resp = urlfetch.fetch(url, headers = headers, validate_certificate=True)
+    if resp.status_code == 200:
+        tmp = ResponseObj()
+        tmp.text = resp.content
+        return tmp
+    else:
+        raise ValueError('Status Code is %s for url %s' % (str(resp.status_code), url))
+
 
 def get_text(el):
     return el.text_content().strip()
@@ -49,6 +92,10 @@ class DellDomChange(Exception):
     pass
 
 class DellTagNotFound(Exception):
+    pass
+
+
+class IBMDomChange(Exception):
     pass
 
 class DellLookUp(object):
@@ -165,13 +212,60 @@ class HPLookUp(object):
         return self._mem_detail_data
 
 
+class IBMLookUp(object):
+    #FOR TESTING  ?manf=ibm&server_tag=7944|KQ095DA
+    def __init__(self, tag):
+        self.type, self.serial = tag.split('|')
+        self.resp = get_https_resp(self.url)
+        self.dom = html.fromstring(self.resp.text)
+        self._mem_header_data = {}
+        self._mem_detail_data = []
+        self.ibm_sys_tables = self.dom.find_class("ibm-data-table")
+        self.INDEX_FOR_HEADER_DATA = 0
+        self.INDEX_FOR_PRODUCT_DATA = 2
+
+
+    @property
+    def url(self):
+        url_template = r"https://www-947.ibm.com/support/entry/portal/wlup?serial={serial}&type={type}"
+        return url_template.format(serial = self.serial, type = self.type)
+
+    @property
+    def header_data(self):
+        if self._mem_header_data == {}:
+            header_row = self.ibm_sys_tables[0].find('.//tbody/tr').findall('.//td')
+            if not header_row:
+                err_msg = "IBM Header Table in not found for tag %s"%self.tag
+                logging.critical(err_msg)
+                raise IBMDomChange(err_msg)
+            model = header_row[1].text.strip()
+            product_number = self.type+'-'+model
+            self._mem_header_data['product_number'] = product_number
+        return self._mem_header_data
+
+    @property
+    def detail_data(self):
+        if self._mem_detail_data == []:
+
+            data_table = self.ibm_sys_tables[self.INDEX_FOR_PRODUCT_DATA]
+            for tr in data_table.findall('.//tbody/tr'):
+                manf_part, fru_part, descr, serviceable =  [td.text.strip() for td in tr.findall('.//td/span')]
+
+                self._mem_detail_data.append({'part_number': manf_part,
+                                              'fru_part': fru_part,
+                                              'description': descr,
+                                              'qty': 1
+                                             })
+        return self._mem_detail_data
 
 
 class ServerTagLookUp:
 
     def __init__(self, tags, manf):
-        assert manf in ['hp', 'dell'], 'Unknown Manufacturer %s'%manf
-        scrapers = {'hp': HPLookUp, 'dell': DellLookUp}
+        assert manf in ['hp', 'dell', 'ibm'], 'Unknown Manufacturer %s'%manf
+        scrapers = {'hp': HPLookUp,
+                    'dell': DellLookUp,
+                    'ibm' : IBMLookUp}
 
         self.tags = tags
         self.manf = manf
@@ -189,10 +283,6 @@ class ServerTagLookUp:
             description = comp.get('description', '')
             internal_comp, cat_sub_type = None, None
             part = models.OEMCompDBAPI(self.manf, product, description)
-            #comp_detail = part.get_component()
-            #if comp_detail is None:
-            #    comp_detail = part.set_component(description)
-            #internal_sku, component_class = comp_detail.internal_sku, comp_detail.component_class
             internal_sku, component_class, source = part.product_detail
             comp['internal_component'] = internal_sku
             comp['cat_sub_type'] = component_class

@@ -38,3 +38,5 @@ libraries:
   version: latest
 - name: lxml
   version: latest
+- name: ssl
+  version: latest

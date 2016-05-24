@@ -127,6 +127,7 @@ class ServerTagLookUpAPI(Handler):
     def get(self):
         tag = self.request.get('server_tag')
         manf = self.request.get('manf')
+        print tag, manf
         if tag == 'test':
             return self.render_json(json.load(open('sample_dell_output.json', 'rb'))[0])
 
