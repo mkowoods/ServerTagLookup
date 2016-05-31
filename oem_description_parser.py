@@ -22,7 +22,6 @@ def _check_is_included_dell(description_list):
         if term2 in set(['BEZEL', 'CABLE', 'PRINTED', 'LABEL', 'BRACKET']):
             return False
     elif term1 == 'MODULE':
-        print description_list
         term2 = description_list[1]
         if term2 in set(['SOFTWARE', 'INFORMATION', 'CABLE', 'BEZEL', 'CORD', 'INFORMATION', 'FILLER']):
             return False
