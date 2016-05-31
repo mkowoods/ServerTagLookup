@@ -1,22 +1,16 @@
 from lxml import html
-import requests
+#import requests
 #import requests_toolbelt.adapters.appengine
+#requests_toolbelt.adapters.appengine.monkeypatch()
 import time
 from google.appengine.api import urlfetch
 import models
 import logging
-
-
-#requests_toolbelt.adapters.appengine.monkeypatch()
+import urlparse
 
 __author__ = 'mwoods'
 
-url ="https://www.google.com"
-result = urlfetch.fetch(url)
-if result.status_code == 200:
-    print result.content
-
-
+#TODO: Need to create a version that uses either requests or urllib2 to handle off line use
 
 # TODO: Look into using the threading module
 # http://stackoverflow.com/questions/2632520/what-is-the-fastest-way-to-send-100-000-http-requests-in-python
@@ -36,53 +30,33 @@ def time_to_connect_logger(ttc):
         logger = logging.error
     logger('Time to Connect: %.2f secs' % ttc)
 
+class STLResponse:
+    url = None
+    text = None
+    status_code = None
+
 
 def get_resp(url):
 
-    """
-    https://cloud.google.com/appengine/docs/python/issue-requests#issuing_an_http_request
-    Issuing an HTTPS request
+    parsed_uri = urlparse.urlparse(url)
 
-    To issue an HTTPS request, set the validate_certificate parameter to true when calling the urlfetch.fetch() method.
-    """
-
-    #print 'starting connection',  url
     headers = {"User-Agent": "Mozilla/5.0 (X11; Linux i686)\
                                AppleWebKit/537.36 (KHTML, like Gecko)\
                                Chrome/39.0.2171.95\
                                Safari/537.36"}
-    start = time.time()
+
     urlfetch.set_default_fetch_deadline(60)
-    #TODO: might need to swithc to urlfetch for https requests.
-    resp = requests.get(url, headers = headers)
-    #resp = urlfetch.fetch(url, headers = headers, validate_certificate=True)
+    resp = urlfetch.fetch(url, headers = headers, validate_certificate = (parsed_uri.scheme == "https"))
+
     if resp.status_code == 200:
-        time_to_connect_logger(time.time() - start)
-        return resp
+        tmp = STLResponse()
+        tmp.text = resp.content
+        tmp.url = urlparse.urljoin(url, resp.final_url) if resp.final_url else url
+        tmp.status_code = resp.status_code
+        return tmp
     else:
         raise ValueError('Status Code is %s for url %s'%(str(resp.status_code), url))
 
-#TODO: Cleanup this is a quick and dirty hack, because I got sick of looking at how to integrate requests API
-#into GAE, probably need to install requests_toolbox...
-def get_https_resp(url):
-
-    class ResponseObj:
-        url = None
-        text = None
-
-
-    headers = {"User-Agent": "Mozilla/5.0 (X11; Linux i686)\
-        AppleWebKit/537.36 (KHTML, like Gecko)\
-        Chrome/39.0.2171.95\
-        Safari/537.36"}
-    urlfetch.set_default_fetch_deadline(60)
-    resp = urlfetch.fetch(url, headers = headers, validate_certificate=True)
-    if resp.status_code == 200:
-        tmp = ResponseObj()
-        tmp.text = resp.content
-        return tmp
-    else:
-        raise ValueError('Status Code is %s for url %s' % (str(resp.status_code), url))
 
 
 def get_text(el):
@@ -93,7 +67,6 @@ class DellDomChange(Exception):
 
 class DellTagNotFound(Exception):
     pass
-
 
 class IBMDomChange(Exception):
     pass
@@ -139,7 +112,7 @@ class DellLookUp(object):
                 self._mem_header_data[label] = value
                 if label == 'Computer Model':
                     self._mem_header_data['product_number'] = value
-            print self.tag, "||||", self.header_data
+            #print self.tag, "||||", self.header_data
         return self._mem_header_data
 
     @property
@@ -216,7 +189,7 @@ class IBMLookUp(object):
     #FOR TESTING  ?manf=ibm&server_tag=7944|KQ095DA
     def __init__(self, tag):
         self.type, self.serial = tag.split('|')
-        self.resp = get_https_resp(self.url)
+        self.resp = get_resp(self.url)
         self.dom = html.fromstring(self.resp.text)
         self._mem_header_data = {}
         self._mem_detail_data = []
