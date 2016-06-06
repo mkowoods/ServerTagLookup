@@ -24,6 +24,7 @@ import server_tag_lookup as stl
 import item_search as search
 from google.appengine.api import memcache
 import csv
+import openpyxl as xl
 import enriched_quote as eq
 
 #TODO: Create GLOBAL Variable to track when the last time the api was called to determine if someone is curently sending a request
@@ -180,26 +181,38 @@ class ItemRelationshipSearchAPI(Handler):
             return self.render_json(search_engine.get_all_exactly_compatible_parts(sku), 200)
 
 
+# TODO list to get quoting up and running
+# TODO: Need to handle upload of quote file and storage to the db
+# TODO: Need to enque the job so that it begins downloading the tags in the background
+# Completed 06/06/16 DONE: Need to determine way to save and render excel files
+# TODO: Need to keep a log of quotes that are avaialable for download
 class QuotePageHandler(Handler):
     def get(self):
-        # TODO: Need to handle upload of quote file and storage to the db
-        # TODO: Need to enque the job so that it begins downloading the tags in the background
-        # TODO: Need to determine way to save and render excel files
-        # TODO: Need to keep a log of quotes that are avaialable for download
+
         return self.render('enrich_quotes.html')
 
 
 class DownloadQuoteHandler(Handler):
     def get(self):
         quote_name = self.request.get('quote_name')
-        if quote_name == 'test':
+        if quote_name == 'csv-test':
             rs = eq.run_test()
+            self.response.headers['Content-Type'] = 'text/csv'
+            self.response.headers['Content-Disposition'] = 'attachment; filename=data.csv'
+            writer = csv.writer(self.response.out)
+            writer.writerows(rs)
+        elif quote_name == 'xlsx-test':
+            # found solution @ http://stackoverflow.com/questions/8469665/saving-openpyxl-file-via-text-and-filestream
+            # using an at the time undocumented method...
+            rs = eq.server_table(eq.res)
+            wb = xl.Workbook()
+            ws = wb.active
+            for row in rs:
+                ws.append(row)
 
-        self.response.headers['Content-Type'] = 'text/csv'
-        self.response.headers['Content-Disposition'] = 'attachment; filename=data.csv'
-        writer = csv.writer(self.response.out)
-        writer.writerows(rs)
-
+            self.response.headers['Content-Type'] = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            self.response.headers['Content-Disposition'] = 'attachment; filename=data.xlsx'
+            self.response.out.write(xl.writer.excel.save_virtual_workbook(wb))
 
 
 

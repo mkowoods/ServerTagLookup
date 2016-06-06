@@ -1,6 +1,6 @@
 import server_tag_lookup as stl
 import json
-# import openpyxl
+import openpyxl
 import csv
 import pprint
 
