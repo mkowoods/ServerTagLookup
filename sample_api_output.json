@@ -1,0 +1,280 @@
+[
+  {
+    "tag": "DGDHXP1",
+    "product_number": "PowerEdge R510",
+    "components": [
+      {
+        "cat_sub_type": null,
+        "description": "LABEL, BARCODE, TRACK, SYSTEM BOARD, GENERIC",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "23503"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "LABEL, REGULATORY, SIDE, UNIVERSAL, BLANK , V2",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "JD509"
+      },
+      {
+        "cat_sub_type": "BLANK",
+        "description": "ASSEMBLY, CARRIER, MOUNTING, BLANK , HARD DRIVE, 3.5",
+        "is_included": true,
+        "qty": "4",
+        "internal_component": "NPTFH",
+        "part_number": "NPTFH"
+      },
+      {
+        "cat_sub_type": "TBD",
+        "description": "ASSEMBLY, CHASSIS, 8HD, TRUSTED PLATFORM MODULE, PWA INTEGRATED, V3, R510",
+        "is_included": true,
+        "qty": "1",
+        "internal_component": "TBD",
+        "part_number": "RF0CM"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "GUIDE, GETTING STARTED, R510, DAO/BCC",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "3YPMN"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "GUIDE, PRODUCT, INFORMATION, SERI, DAO/BCC",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "J894K"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "PLACEMAT, SETUP, POWEREDGE, 3, WEST",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "MR1W1"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "GUIDE, PRODUCT, INFORMATION, WSI, PE/PV",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "P071K"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "LABEL, FASCIA, INTEL, CARTON",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "MY297"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "SHIPPING MATERIAL, CONTAINER, SYSTEM BOARD, R510, 4/8",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "C4G78"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "LABEL, BARCODE, SYS BOX, GENERIC",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "23501"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "SHIPPING MATERIAL, OPTION, TRAY, 1/2U, 3.63H",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "V21WY"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "ASSEMBLY, CABLE, REDUNDANT ARRAY OF INTEGRATED/ INEXPENSIVE DRIVES/DISKS, SLOT4, 8HD, 2, R510",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "431NJ"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "CABLE, LIGHT EMITTING DIODE, HARD DRIVE, AUXILIARY, 7",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "42964"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "ASSEMBLY, CABLE, REDUNDANT ARRAY OF INTEGRATED/ INEXPENSIVE DRIVES/DISKS, SLOT4, 8HD, 1, R510",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "T520P"
+      },
+      {
+        "cat_sub_type": "CONTROLLER",
+        "description": "PRINTED WIRING ASSY, RISER, SERVER, SERVER CHASSIS, DELL COMPUTER CORPORATION, PLN-AMEA, V2",
+        "is_included": true,
+        "qty": "1",
+        "internal_component": "K869T",
+        "part_number": "K869T"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "ASSEMBLY, PRINTED WIRING ASSY, PLANAR (MOTHERBOARD), W/MZR",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "Y383M"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "CORD, POWER, 10A, 2F, C13/C14, EUROPE/EUROPEAN",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "X364H"
+      },
+      {
+        "cat_sub_type": "CPU",
+        "description": "PROCESSOR, L5520, 2.26/5.86, 8MB, XDN, D0",
+        "is_included": true,
+        "qty": "1",
+        "internal_component": "L5520",
+        "part_number": "K093J"
+      },
+      {
+        "cat_sub_type": "ACCESSORY",
+        "description": "ASSEMBLY, DIGITAL VIDEO DISK DRIVE, Serial ATA, 12.7, TEAC, ENTERPRISE SYSTEMS GROUP",
+        "is_included": true,
+        "qty": "1",
+        "internal_component": "KVXM6",
+        "part_number": "KVXM6"
+      },
+      {
+        "cat_sub_type": "HARD DRIVE",
+        "description": "HARD DRIVE, 1TRB, EXPANDABLE SYSTEM, 7.2K, 3.5, WESTERN DIGITAL, XL333RE",
+        "is_included": true,
+        "qty": "1",
+        "internal_component": "50XV4",
+        "part_number": "50XV4"
+      },
+      {
+        "cat_sub_type": "BLACKLIST",
+        "description": "ASSEMBLY, CARRIER, HARD DRIVE, Serial ATA, 3.5",
+        "is_included": true,
+        "qty": "1",
+        "internal_component": "X968D",
+        "part_number": "X968D"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "SCREW, 6-32X.225, PHILLIPS HEAD, FLAT HEAD, BLACK",
+        "is_included": false,
+        "qty": "4",
+        "internal_component": null,
+        "part_number": "G937K"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "LABEL, PRINT ON DEMAND, HARD DRIVE, RECTANGULAR",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "FM833"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "ASSEMBLY, CABLE, MOTHERBOARD, POWER, OPTICAL DEVICE DRIVE, R510",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "K425P"
+      },
+      {
+        "cat_sub_type": "MEMORY",
+        "description": "DUAL IN-LINE MEMORY MODULE, 8G, 1333, 2RX4X72, 8, 240, REGULATORY",
+        "is_included": true,
+        "qty": "6",
+        "internal_component": "X3R5M-NON",
+        "part_number": "X3R5M"
+      },
+      {
+        "cat_sub_type": "CONTROLLER",
+        "description": "PRINTED WIRING ASSY, CONTROLLER, SERIAL ATTACHED SCSI, SAS6/IR, INTEGRATED",
+        "is_included": true,
+        "qty": "1",
+        "internal_component": "YK838",
+        "part_number": "YK838"
+      },
+      {
+        "cat_sub_type": "CPU",
+        "description": "PROCESSOR, L5520, 2.26/5.86, 8MB, XDN, D0",
+        "is_included": true,
+        "qty": "1",
+        "internal_component": "L5520",
+        "part_number": "K093J"
+      },
+      {
+        "cat_sub_type": "POWER SUPPLY",
+        "description": "POWER SUPPLY, 750W, REDUNDANT, DELTA PRODUCTS, V2",
+        "is_included": true,
+        "qty": "2",
+        "internal_component": "FN1VT",
+        "part_number": "FN1VT"
+      },
+      {
+        "cat_sub_type": "CONTROLLER",
+        "description": "CARD (CIRCUIT), NETWORK, PERIPHERAL COMPONENT INTERCONNECT EXPRESS , 1GB, DELL PLUS, INTEL",
+        "is_included": true,
+        "qty": "1",
+        "internal_component": "G174P",
+        "part_number": "G174P"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "ASSEMBLY, BEZEL, 2U, POWEREDGE, R510",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "T590P"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "KIT, RACK RAIL, 2/4PST, 2U, STATIC, SLIM FORM FACTOR",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "H872R"
+      },
+      {
+        "cat_sub_type": null,
+        "description": "KIT, MEDIA, DIGITAL VIDEO DISK DRIVE, DOCUMENT OBJECT MODEL, V6.4.0",
+        "is_included": false,
+        "qty": "1",
+        "internal_component": null,
+        "part_number": "HM2MY"
+      },
+      {
+        "cat_sub_type": "HEATSINK",
+        "description": "HEATSINK, PLASTIC GRID ARRAY, 2.7X6.6, 95W, V2, R510",
+        "is_included": true,
+        "qty": "2",
+        "internal_component": "6DMRF",
+        "part_number": "6DMRF"
+      }
+    ]
+  }
+]
