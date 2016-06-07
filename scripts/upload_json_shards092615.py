@@ -31,7 +31,7 @@ def production():
         shard = str(shard)
         id = LABEL+'::'+shard
         print 'working on', id
-        data = json.load(open('./static/item_map_%s.json'%(shard), 'rb'))
+        data = json.load(open('/item_map_backup/item_map_%s.json' % (shard), 'rb'))
 
         im = models.ItemMasterStorage(
             id = id,
