@@ -5,52 +5,72 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="/static/TableTools-2.2.4/css/dataTables.tableTools.min.css">
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="../static/style_eq.css">
     <style>
         #item-search-bar {
             position: relative;
             top: 40px;
             width: 90%;
         }
-
         .spinner {
             /*display: inline-block;
             opacity: 0;
             max-width: 0;
             */
-
             -webkit-transition: opacity 0.25s, max-width 0.45s;
             -moz-transition: opacity 0.25s, max-width 0.45s;
             -o-transition: opacity 0.25s, max-width 0.45s;
             transition: opacity 0.25s, max-width 0.45s; /* Duration fixed since we animate additional hidden width */
         }
-
         .has-spinner.active {
             cursor: progress;
         }
-
         .has-spinner.active .spinner {
             opacity: 1;
             max-width: 50px; /* More than it will ever come, notice that this affects on animation duration */
         }
-
-
     </style>
 </head>
 <body>
 <div id="banner"></div>
 <div class="row">
-    <input type="file" id="input">
+    <div class="col-md-4">
+        <form>
+                <span class="fileUpload btn btn-default">
+                    <span class="glyphicon glyphicon-upload"></span> Upload file
+                    <input type="file" id="uploadFile"/>
+                </span>
+        </form>
 
+        <p id="fileUploadError" class="text-danger hide"></p>
+
+        <div class="list-group" id="files"></div>
+
+    </div>
 </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(main);
+<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+//this and related code borrowed from http://jsfiddle.net/lovlka/N4Jxk/
+<script id="fileUploadProgressTemplate" type="text/x-jquery-tmpl">
+        <div class="list-group-item">
+            <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-info" style="width: 0%;"></div>
+            </div>
+        </div>
+
 </script>
+
+<script id="fileUploadItemTemplate" type="text/x-jquery-tmpl">
+        <div class="list-group-item">
+            <button type="button" class="close">&times;</button>
+            <span class="glyphicon glyphicon-file"></span> File name (type, date, etc)
+        </div>
+
+</script>
+<script src="../static/script_eq.js"></script>
+
 </body>
 </html>
-
