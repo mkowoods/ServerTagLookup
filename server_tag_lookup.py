@@ -266,7 +266,8 @@ class ServerTagLookUp:
     def _scrape(self):
         for tag in self.tags:
             model = self.scraper(tag)
-            self.results.append({'tag': tag,
+            self.results.append({
+                                'tag': tag,
                                 'components': self.enrich_components(model.detail_data),
                                 'product_number' : model.header_data.get('product_number', None)}
                                 )
