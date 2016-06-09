@@ -38,10 +38,13 @@ class ServerTagHistory(ndb.Model):
     create_date = ndb.DateTimeProperty(auto_now_add=True)
     manufacturer = ndb.StringProperty()
     tag = ndb.StringProperty()
-    data = ndb.JsonProperty()
+    # data = ndb.JsonProperty()
+    data = ndb.TextProperty()
 
     @staticmethod
     def add_tag(manf, tag, data):
+        if type(data) != str:
+            data = json.dumps(data)
         tag = ServerTagHistory(id = manf+'|'+tag,
                                manufacturer = manf,
                                tag = tag,
@@ -53,7 +56,11 @@ class ServerTagHistory(ndb.Model):
     def get_data(manf, tag):
         server = ServerTagHistory.get_by_id(manf+'|'+tag)
         if server is not None:
-            return server.data
+            return json.loads(server.data)
+
+    @staticmethod
+    def is_in_db(manf, tag):
+        return ServerTagHistory.get_by_id(manf + '|' + tag) is not None
 
 
 

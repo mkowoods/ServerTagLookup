@@ -117,13 +117,23 @@ class ServerTagLookUpAPI(Handler):
     def get_json(self, tag, manf):
         key = manf+"|"+tag
         cached_data = memcache.get(key)
+
         if cached_data:
             return cached_data, 200
         else:
-            data, status_code = self.get_json_payload_from_site(tag, manf)
-            if status_code == 200:
-                memcache.set(key, data)
-            return data, status_code
+            db_data = models.ServerTagHistory.get_data(manf, tag)
+            if db_data:
+                memcache.set(key, db_data)
+                return db_data, 200
+
+        data, status_code = self.get_json_payload_from_site(tag, manf)
+        if status_code == 200:
+            memcache.set(key, data)
+            try:
+                models.ServerTagHistory.add_tag(manf, tag, data)
+            except:
+                logging.exception('Write to DB Failed on manf: %s, tag: %s' % (manf, tag))
+        return data, status_code
 
     def get(self):
         tag = self.request.get('server_tag')
@@ -202,17 +212,25 @@ class DownloadQuoteHandler(Handler):
             writer = csv.writer(self.response.out)
             writer.writerows(rs)
         elif quote_name == 'xlsx-test':
-            # found solution @ http://stackoverflow.com/questions/8469665/saving-openpyxl-file-via-text-and-filestream
-            # using an at the time undocumented method...
-            rs = eq.server_table(eq.res)
-            wb = xl.Workbook()
-            ws = wb.active
-            for row in rs:
-                ws.append(row)
 
             self.response.headers['Content-Type'] = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
             self.response.headers['Content-Disposition'] = 'attachment; filename=data.xlsx'
             self.response.out.write(xl.writer.excel.save_virtual_workbook(wb))
+
+
+class TagLookUpQueueHandler(Handler):
+    def post(self):
+        tag = self.request.get('tag')
+        manf = self.request.get('tag')
+
+        def run_lookup_and_save_to_db():
+            # check if item is in DB
+            if not models.ServerTagHistory.is_in_db(manf, tag):
+                logging.info('%s %s not found in the db running STL' % (manf, tag))
+                lookup = stl.ServerTagLookUp([tag], manf)
+                lookup
+
+
 
 
 
