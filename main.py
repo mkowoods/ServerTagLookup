@@ -228,7 +228,7 @@ class TagLookUpQueueHandler(Handler):
             if not models.ServerTagHistory.is_in_db(manf, tag):
                 logging.info('%s %s not found in the db running STL' % (manf, tag))
                 lookup = stl.ServerTagLookUp([tag], manf)
-                lookup
+                
 
 
 
